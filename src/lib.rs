@@ -1,6 +1,8 @@
 use nih_plug::prelude::*;
 use std::sync::Arc;
 
+mod editor;
+
 /// A plugin that inverts all MIDI note numbers, channels, CCs, velocities, pressures, and
 /// everything else you don't want to be inverted.
 struct MidiInverter {
@@ -215,9 +217,9 @@ impl Plugin for MidiInverter {
         ProcessStatus::Normal
     }
 
-    // fn editor(&mut self, _async_executor: AsyncExecutor<Self>) -> Option<Box<dyn Editor>> {
-    //     editor::create(self.params.clone())
-    // }
+    fn editor(&mut self, _async_executor: AsyncExecutor<Self>) -> Option<Box<dyn Editor>> {
+        editor::create(self.params.clone())
+    }
 }
 
 impl ClapPlugin for MidiInverter {

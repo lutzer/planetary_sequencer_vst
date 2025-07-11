@@ -11,6 +11,8 @@ crate-type = ["cdylib"]
 
 [dependencies]
 nih_plug = { git = "https://github.com/robbert-vdh/nih-plug.git", rev = "ecfd632" }
+nih_plug_iced = { git = "https://github.com/robbert-vdh/nih-plug.git", rev = "ecfd632" }
+
 
 [profile.release]
 lto = "thin"
