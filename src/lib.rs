@@ -214,6 +214,10 @@ impl Plugin for MidiInverter {
 
         ProcessStatus::Normal
     }
+
+    // fn editor(&mut self, _async_executor: AsyncExecutor<Self>) -> Option<Box<dyn Editor>> {
+    //     editor::create(self.params.clone())
+    // }
 }
 
 impl ClapPlugin for MidiInverter {
